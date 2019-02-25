@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <script src="./particles.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+</head>
+<body>
+     <nav>
+         <img src = "./assets/wenLogo.png">
+         <a href = "#contactDiv">Cotact Us</a>
+         <a href = "#skillsDiv">Product</a>
+         <a href = "#infoDiv">Detail</a>
+         <a href = "#contextDiv">Context</a>
+         <a href = "#homeDiv">Home</a>
+
+    </nav>
+    <main class = "app">
+        <div id = "landingDiv" class = "region">
+            <iframe id = "spaceInvader" src = "./spaceInvader.html"></iframe>
+        </div>
+        <div id = "homeDiv" class = "region">
+            <div id = "leftDiv" >
+            </div>
+            <div id = "introDiv"><p></p></div>
+            <script>
+
+              </script>
+        </div>
+ 
+        <div id = "infoDiv" class = "region">
+        </div>
+        
+        <div id = "skillsDiv" class = "region">
+          <iframe id= "skillPanel" src= "./skillCharts.html"></iframe>
+        </div> 
+        <div id = "contactDiv" class = "region"></div>
+        <div id = "contextDiv" class = "region"></div>
+    </main>
+    <script>
+            var config = {
+  "particles": {
+    "number": {
+      "value": 600,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 4,
+        "size_min": 0.3,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 15,
+      "direction": "right",
+      "random": true,
+      "straight": true,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 600
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 250,
+        "size": 0,
+        "duration": 2,
+        "opacity": 0,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 80,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+};
+            window.onload = () => {
+            window.location.href = "#landingDiv";
+            }
+            var jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(config));
+            particlesJS.load('leftDiv', jsonUri, function() {
+            console.log('callback - particles.js config loaded');
+            });
+            </script>
+</body>
+</html>

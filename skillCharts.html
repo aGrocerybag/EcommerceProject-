@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="./particles.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+</head>
+
+<body>
+    <div id = "mySetOfSkill">
+    <div id="chartContainer" style="height: 370px; width: 100%;">
+    </div>
+    </div>
+    <div id ="showCase">
+     <div id = "js1">1</div>
+     <div id = "js2">2</div>    
+     <div id = "js3">3</div>    
+     <div id = "js4">4</div>    
+     <div id = "js5">5</div>    
+     <div id = "js6">6</div>    
+     <div id = "js7">7</div>    
+     <div id = "js8">8</div>    
+     <div id = "js9">9</div>    
+     <div id = "js10">10</div>    
+     <div id = "js11">11</div>    
+    </div>
+   
+   <style>
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadein {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+@keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10%);
+    }
+  }
+  @keyframes slideBottom {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(10%);
+
+    }
+  }
+  @keyframes slideUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
+  }
+  @keyframes scaleIn{
+      0%{
+          transform: scale(0.99);
+      }
+      50%{
+          transform: scale(0.9);
+      }
+      100%{
+          transform: scale(0.85);
+      }
+  }
+      body,html{
+          margin: 0;
+          background: black;
+          height:100%;
+      } 
+    #mySetOfSkill{
+        float:left;
+        width: 30%;
+        height:100%;
+        background:white;
+        animation: slideInFromLeft 1s;
+
+    }
+    #showCase{
+        float: right;
+        width:70%;
+        height:100%;
+        background:black;
+    }
+    #showCase{
+        display:grid; 
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 7px;
+        grid-row-gap: 9px;   
+      }
+    #showCase > div{
+        background: white;
+    }
+    #showCase > div :hover{
+       background: blue;
+     }
+
+    #js1{
+        grid-column: 2 / 4;
+        grid-row: 2 / 6;
+    }
+    #js1:hover{
+        animation: slideLeft 0.6s forwards;
+    }
+    #js2{
+        grid-column: 4 / 6;
+        grid-row: 2 / 4;
+    }
+    #js2:hover{
+        animation: slideUp 0.6s forwards;
+    }
+    #js3{
+        grid-column: 6 / 8;
+        grid-row: 2 / 4;
+    }
+    #js3:hover{
+        animation: slideUp 0.6s forwards;
+    }
+    #js4{
+        grid-column: 8 / 9;
+        grid-row: 2 / 2;
+    }
+    #js4:hover{
+        animation: slideUp 0.6s forwards;
+    }
+    #js5{
+        grid-column: 4 / 6;
+        grid-row: 4 / 6;
+    }
+    #js5:hover{
+        animation: scaleIn 0.8s ;
+     }
+    #js6{
+        grid-column: 6 / 8;
+        grid-row: 4 / 6;
+    }
+    #js6:hover{
+        animation: scaleIn 0.6s forwards;
+    }
+    #js7{
+        grid-column: 8 / 9;
+        grid-row: 3 / 3;
+    }
+    #js7:hover{
+        animation: slideRight 0.6s forwards;
+    }
+    #js8{
+        grid-column: 2 / 4;
+        grid-row: 6 / 8;
+    }
+    #js8:hover{
+        animation: slideBottom 0.6s forwards;
+    }
+
+    #js9{
+        grid-column: 4 / 6;
+        grid-row: 6 / 8;
+    }
+    #js9:hover{
+        animation: slideBottom 0.6s forwards;
+    }
+
+    #js10{
+        grid-column: 6 / 8;
+        grid-row: 6 / 6;
+    }
+    #js10:hover{
+        animation: slideRight 0.6s forwards;
+    }
+    
+
+    #js11{
+        grid-column: 8 / 9;
+        grid-row: 4 / 5;
+    }
+    #js11:hover{
+        animation: slideRight 0.6s forwards;
+    }
+
+
+    </style>
+    </body>
+</body>
+
+</html>

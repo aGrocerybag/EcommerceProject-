@@ -1,0 +1,125 @@
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+  @keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+body,html{
+    margin:0;
+    height: 100%;
+
+
+    font-family: 'Press Start 2P', cursive;
+
+}
+main{
+    height: 93.5%;
+}
+#homeDiv{
+    background:url("./img/cosmonut.gif");
+    z-index:-1;
+}
+#leftDiv{
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    float: left;
+    position: relative;   
+}
+canvas{
+    display: block;
+}
+#introDiv{
+    width: 50%;
+    height: 100%;
+    z-index: 9;
+    float: left;
+    background:white;
+    animation: slideInFromRight 1s;
+    text-align: center;
+    position: relative;
+}
+#infoDiv{
+
+    background:#5a5a5a;
+}
+#skillsDiv{
+
+    background:#5a5a5a;
+}
+#contactDiv{
+
+    background:#5a5a5a;
+}
+#contextDiv{
+    background:#5a5a5a;
+}
+.region{
+    width: 100%;
+    height: 100%;
+}
+nav {
+    width: 100%;
+    overflow: hidden;
+    background:white;
+  }
+
+  nav a {
+    padding:1%;
+    float: right;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right:4%;
+  }
+ #spaceInvader,#skillPanel,#hiddenStuff{
+     width:100%;
+     height: 100%;
+     border:none; 
+ }
+ nav img{
+     height:55px;
+     
+ }
+ nav a:hover{
+    animation: fade 0.8s linear 1;
+
+ }
+.app > * {
+    display: none;
+}
+.app > *:last-child {
+    display: block;
+}
+
+.app > *:target {
+    display: block;
+    -webkit-animation: fade 300ms linear 1;
+    animation: fade 0.8s linear 1;
+
+}
+.app > *:target ~ * {
+    display: none;
+}
+  
